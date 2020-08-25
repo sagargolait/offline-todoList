@@ -1,0 +1,12 @@
+.app {
+  display: flex;
+  justify-content: center;
+}
+.app__container {
+  width: 100%;
+  height: 100%;
+  max-width: 375px;
+}
+.app__heading {
+  text-align: center;
+}

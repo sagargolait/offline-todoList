@@ -1,0 +1,9 @@
+.hashtag {
+  color: blue;
+  cursor: pointer;
+}
+.todo-item {
+  background: red;
+  padding: 10px;
+  word-wrap: break-word;
+}

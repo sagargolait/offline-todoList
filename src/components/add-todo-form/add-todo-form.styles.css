@@ -1,0 +1,10 @@
+.add-todo-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.add-todo-input {
+  height: 70%;
+  padding: 10px;
+  margin-bottom: 30px;
+}
