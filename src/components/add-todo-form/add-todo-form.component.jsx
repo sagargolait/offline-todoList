@@ -13,7 +13,7 @@ const AddTodoForm = ({ newTodoText, setNewTodoText, addNewTodo }) => {
 
   return (
     <form onSubmit={handleSubmit} className="add-todo-form">
-      <textarea
+      <input
         required
         type="text"
         className="add-todo-input"
