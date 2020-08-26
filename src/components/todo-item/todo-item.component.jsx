@@ -4,29 +4,44 @@ import {
   addHashTagFilter,
   markTodoAsCompleted,
 } from '../../redux/todos/todos.actions'
+import CustomButton from '../custom-button/custom-button.component'
+import { ReactComponent as AddTodoIcon } from '../../assets/check_circle_outline.svg'
+
+import { ReactComponent as DoneIcon } from '../../assets/done.svg'
 import './todo-item.styles.css'
 
 const TodoItem = ({ todo, markTodoAsCompleted, addHashTagFilter }) => {
   return (
     <div key={todo.id} className="todo-item">
-      {todo.text.split(' ').map((word, index) =>
-        word.startsWith('#') ? (
-          <span
-            key={index}
-            onClick={() => addHashTagFilter(word)}
-            className="hashtag"
+      <div className="todo-item__text">
+        {todo.text.split(' ').map((word, index) =>
+          word.startsWith('#') ? (
+            <span
+              key={index}
+              onClick={() => addHashTagFilter(word)}
+              className="hashtag"
+            >
+              {word}{' '}
+            </span>
+          ) : (
+            <span key={index}>{word} </span>
+          ),
+        )}
+      </div>
+      <div className="mark-as-complete__button-container">
+        {todo.status === 'incomplete' ? (
+          <CustomButton
+            isMarkAsComplete
+            onClick={() => markTodoAsCompleted(todo.id)}
           >
-            {word}{' '}
-          </span>
+            <AddTodoIcon />
+          </CustomButton>
         ) : (
-          <span key={index}>{word} </span>
-        ),
-      )}
-      {todo.status === 'incomplete' ? (
-        <button onClick={() => markTodoAsCompleted(todo.id)}>
-          Mark as complete
-        </button>
-      ) : null}
+          <div className="status-done-label">
+            <DoneIcon />
+          </div>
+        )}
+      </div>
     </div>
   )
 }

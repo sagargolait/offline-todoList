@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { ReactComponent as ResetIcon } from './assets/reset.svg'
 import HashFiltersContainer from './components/hash-filters-container/hash-filters-container.component'
 import TodosContainer from './components/todos-container/todos-container.component'
 import AddTodoForm from './components/add-todo-form/add-todo-form.component'
@@ -22,10 +23,13 @@ const App = ({ todos, hashTagFilters, setFilteredTodos, clearState }) => {
   return (
     <div className="app">
       <div className="app__container">
-        <h1 className="app__heading">TODO APP</h1>
-        <CustomButton isReset onClick={clearState}>
-          Reset
-        </CustomButton>
+        <h1 className="app__heading">TO-DO APP</h1>
+        <div className="reset-button__container">
+          <CustomButton isReset onClick={clearState}>
+            Reset
+            <ResetIcon />
+          </CustomButton>
+        </div>
         <HashFiltersContainer />
         <AddTodoForm />
         <TodosContainer />

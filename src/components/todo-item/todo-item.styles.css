@@ -3,7 +3,29 @@
   cursor: pointer;
 }
 .todo-item {
-  background: red;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: rgb(139, 139, 219);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  min-height: 70px;
+}
+.todo-item__text {
+  width: 70%;
+  height: 100%;
+  overflow-wrap: break-word;
   padding: 10px;
-  word-wrap: break-word;
+}
+.mark-as-complete__button-container {
+  width: 20%;
+}
+.status-done-label {
+  color: white;
+  background-color: #20bf55;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+  display: grid;
+  place-items: center;
 }

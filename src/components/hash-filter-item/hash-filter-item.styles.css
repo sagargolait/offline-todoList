@@ -1,5 +1,8 @@
 .hash-filter-item {
-  border: 1px solid green;
   padding: 5px;
   border-radius: 50px;
+  align-items: center;
+  background-color: rgb(114, 114, 243);
+  color: white;
+  overflow-wrap: break-word;
 }

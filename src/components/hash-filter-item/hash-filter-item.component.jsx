@@ -6,17 +6,12 @@ import './hash-filter-item.styles.css'
 
 const HashFilterItem = ({ removeHashTagFilter, filterKey }) => {
   return (
-    <>
-      <span className="hash-filter-item">
-        {filterKey}{' '}
-        <CustomButton
-          isHashLabel
-          onClick={() => removeHashTagFilter(filterKey)}
-        >
-          X
-        </CustomButton>
-      </span>
-    </>
+    <span className="hash-filter-item">
+      {filterKey}{' '}
+      <CustomButton isHashLabel onClick={() => removeHashTagFilter(filterKey)}>
+        X
+      </CustomButton>
+    </span>
   )
 }
 const mapStateToProps = (state) => ({
