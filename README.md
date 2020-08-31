@@ -27,3 +27,8 @@ The data of the app will be preserved even if the page is refreshed or the brows
 ## Reset Feature
 
 You can reset the entire list by clicking the reset button on top of the app. This will erase all the list items present in the list.
+
+## Check out the demo
+
+In case you want to checkout the deployed version of the app, here's the link.
+[https://todo-with-hashtag-filter-4bf22.web.app/](https://todo-with-hashtag-filter-4bf22.web.app/)
