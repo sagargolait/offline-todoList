@@ -1,14 +1,14 @@
 .app {
   display: flex;
   justify-content: center;
-  background-color: rgb(120, 120, 243);
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
   min-height: 100vh;
 }
 .app__container {
   width: 80%;
   height: 100%;
   max-width: 375px;
-  background-color: rgb(61, 61, 184);
+  background-color: rgb(135, 206, 250);
   margin-top: 30px;
   padding: 20px;
   border-radius: 5px;
