@@ -1,5 +1,5 @@
-import React from 'react'
-import './custom-button.styles.css'
+import React from "react";
+import "./custom-button.styles.css";
 
 const CustomButton = ({
   onClick,
@@ -21,6 +21,6 @@ const CustomButton = ({
   >
     {children}
   </button>
-)
+);
 
-export default CustomButton
+export default CustomButton;

@@ -1,15 +1,15 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { setNewTodoText, addNewTodo } from '../../redux/todos/todos.actions'
-import CustomButton from '../custom-button/custom-button.component'
-import { ReactComponent as AddIcon } from '../../assets/circle_outline.svg'
-import './add-todo-form.styles.css'
+import React from "react";
+import { connect } from "react-redux";
+import { setNewTodoText, addNewTodo } from "../../redux/todos/todos.actions";
+import CustomButton from "../custom-button/custom-button.component";
+import { ReactComponent as AddIcon } from "../../assets/circle_outline.svg";
+import "./add-todo-form.styles.css";
 
 const AddTodoForm = ({ newTodoText, setNewTodoText, addNewTodo }) => {
   const handleSubmit = (e) => {
-    e.preventDefault()
-    addNewTodo()
-  }
+    e.preventDefault();
+    addNewTodo();
+  };
 
   return (
     <form onSubmit={handleSubmit} className="add-todo-form">
@@ -25,14 +25,14 @@ const AddTodoForm = ({ newTodoText, setNewTodoText, addNewTodo }) => {
         Add todo <AddIcon />
       </CustomButton>
     </form>
-  )
-}
+  );
+};
 const mapStateToProps = (state) => ({
   newTodoText: state.todos.newTodoText,
-})
+});
 const mapDispatchToProps = (dispatch) => ({
   setNewTodoText: (value) => dispatch(setNewTodoText(value)),
   addNewTodo: () => dispatch(addNewTodo()),
-})
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
+export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm);
